@@ -410,7 +410,7 @@ header {
     text-decoration: none;
 }
 
-.nav-tabs-item .ui-state-active .nav-tabs-link {
+.nav-tabs-item.ui-state-active .nav-tabs-link {
     color: #F3F2F0;
     border-bottom: 1px solid #F3F2F0;
 }
