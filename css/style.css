@@ -294,6 +294,22 @@ header {
     top: calc(50% - 60px);
 }
 
+.circle-tarif {
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    left: -71px;
+    top: calc(50% - 70px);
+}
+
+.circle-price {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    left: -44px;
+    top: calc(50% - 45px);
+}
+
 .section-about {
     padding-top: 108px;
 }
@@ -479,6 +495,7 @@ header {
 
 .section-advantages {
     padding-top: 153px;
+    padding-bottom: 180px;
 }
 
 .advantages-text {
@@ -538,6 +555,7 @@ header {
     border-right: 1px solid rgba(243, 242, 240, 0.3);
     display: flex;
     justify-content: center;
+    padding: 34px 92px;
 }
 
 .tech-item:first-child,
@@ -586,4 +604,115 @@ header {
     width: 2px;
     border: 10px solid transparent;
     border-bottom: 10px solid #E31B1B;
+}
+
+.section-tarif {
+    padding-top: 150px;
+}
+
+.tarif {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.tarif-item {
+    border-bottom: 1px solid #F3F2F0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 299px;
+    padding-bottom: 62px;
+}
+
+.tarif-title {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border-bottom: 1px solid #F3F2F0;
+    padding-top: 5px;
+}
+
+.tarif-title>div {
+    position: relative;
+}
+
+.tarif-title p {
+    position: relative;
+    z-index: 1;
+}
+
+.tarif-description {
+    font-size: 28px;
+    line-height: 150%;
+    opacity: 0.8;
+    border-bottom: 1px solid #F3F2F0;
+    padding-bottom: 50px;
+}
+
+.tarif-name {
+    font-size: 28px;
+    line-height: 150%;
+    margin-top: 61px;
+    margin-bottom: 20px;
+
+}
+
+.tarif-text {
+    font-size: 16px;
+    line-height: 150%;
+    opacity: 0.8;
+}
+
+.tarif .project {
+    display: inline-flex;
+}
+
+.tarif-pack {
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 700;
+    margin-top: 59px;
+    margin-bottom: 29px;
+}
+
+.tarif-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+.tarif-list-item {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 14px;
+}
+
+.tarif-list-item::before {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    background: #F3F2F0;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 2px);
+}
+
+.tarif-price {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 150%;
+}
+
+.tarif-footer {
+    position: relative;
+}
+
+.tarif-footer p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
 }
