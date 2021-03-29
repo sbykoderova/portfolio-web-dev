@@ -23,8 +23,16 @@ body {
 .dark .social,
 .dark .steps-item,
 .dark .about-title,
-.dark .about-description {
+.dark .about-description,
+.dark .tarif-item,
+.dark .tarif-title,
+.dark .tarif-description {
     border-bottom: 1px solid #F3F2F0;
+}
+
+.dark .ui-selectmenu-menu .ui-menu {
+    background-color: #38383A;
+    color: rgba(243, 242, 240, 0.4);
 }
 
 .dark .steps-item:first-child {
@@ -40,6 +48,10 @@ body {
     color: #010101;
 }
 
+.light .nav-info .nav-item::before {
+    background-color: rgba(1, 1, 1, 0.2);
+}
+
 .light .circle circle {
     fill: #FFFFFF
 }
@@ -48,15 +60,101 @@ body {
     fill: #D40000
 }
 
+.light .project-img {
+    background-image: url(../img/Arrow2.svg);
+}
+
 .light .social,
 .light .steps-item,
 .light .about-title,
-.light .about-description {
+.light .about-description,
+.light .tarif-item,
+.light .tarif-title,
+.light .tarif-description {
     border-bottom: 1px solid #010101;
 }
 
 .light .steps-item:first-child {
     border-top: 1px solid #010101;
+}
+
+.light .nav-social .nav-item::before {
+    background-color: rgba(1, 1, 1, 0.2);
+}
+
+.light .nav-tabs-item.ui-state-active .nav-tabs-link {
+    color: #010101;
+    border-bottom: 1px solid #010101;
+}
+
+.light .nav-tabs-link {
+    color: rgba(1, 1, 1, 0.4);
+}
+
+.light .work {
+    border: 1px solid #EDEDEB;
+}
+
+.light .advantages {
+    border-top: 1px solid #010101;
+}
+
+.light .advantages-image path {
+    fill: #010101;
+}
+
+.light .tech-item {
+    color: rgba(1, 1, 1, 0.3);
+    border-top: 1px solid rgba(1, 1, 1, 0.3);
+    border-bottom: 1px solid rgba(1, 1, 1, 0.3);
+    border-right: 1px solid rgba(1, 1, 1, 0.3);
+}
+
+.light .tech-item:first-child,
+.light .tech-item:nth-child(5) {
+    border-left: 1px solid rgba(1, 1, 1, 0.3);
+}
+
+.light .project:hover {
+    border-bottom: 2px solid #010101;
+}
+
+.light .form-item,
+.light .footer-top {
+    border-top: 1px solid #010101;
+}
+
+.light form input {
+    background-color: rgba(1, 1, 1, 0.05);
+    color: #010101;
+}
+
+.light .ui-selectmenu-button.ui-button {
+    background-color: rgba(1, 1, 1, 0.05);
+    color: #010101;
+}
+
+.light .ui-selectmenu-menu .ui-menu {
+    background-color: #E7E6E4;
+    color: #010101;
+}
+
+.light .footer-bottom p {
+    color: rgba(1, 1, 1, 0.3);
+}
+
+.light .footer-link {
+    color: rgba(1, 1, 1, 0.3);
+    border-bottom: 1px solid rgba(1, 1, 1, 0.3);
+}
+
+.light .footer-link:hover {
+    color: #010101;
+    border-bottom: 1px solid #010101;
+}
+
+.light .gradient {
+    background: linear-gradient(180deg, #E7E6E6 0%, rgba(231, 230, 230, 0) 100%);
 }
 
 .wrapper {
@@ -331,7 +429,7 @@ header {
 
 .about {
     display: grid;
-    grid-template: 290px / repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .about-title {
@@ -751,7 +849,6 @@ header {
     font-weight: 700;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    border-bottom: 1px solid #F3F2F0;
     line-height: 150%;
     position: relative;
 }
@@ -765,12 +862,13 @@ header {
     font-size: 28px;
     line-height: 150%;
     opacity: 0.8;
-    border-bottom: 1px solid #F3F2F0;
     padding-bottom: 32px;
 }
 
 .form-item {
+    border-top: 1px solid #F3F2F0;
     padding-top: 60px;
+    z-index: 1;
 }
 
 .form-social {
@@ -820,6 +918,12 @@ form input[type=submit] {
     color: #F3F2F0;
     padding: 20px 0;
     margin-bottom: 0;
+    transition: 0.2s ease;
+}
+
+form input[type=submit]:hover {
+    background: #EA0E00;
+    cursor: pointer;
 }
 
 form select {
