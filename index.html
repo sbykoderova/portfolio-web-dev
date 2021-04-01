@@ -29,7 +29,13 @@
                     <li class="nav-item"><a class="nav-link" href="mailto:alexdev@gmail.com">alexdev@gmail.com</a></li>
                 </ul>
             </header>
-            <img class="photo" src="img/photo.png" alt="Photo">
+            <div class="header-mobile">
+                <a class="nav-link" href="tel:+79237777777">8 923 777-77-77</a>
+                <button id="opener" class="menu"><img src="img/icons/menu.svg" alt="Menu"></button>
+            </div>
+            <div class="photo">
+                <img src="img/photo.png" alt="Photo">
+            </div>
             <main>
                 <div class="main">
                     <svg class="circle circle-main" viewBox="0 0 253 253" xmlns="http://www.w3.org/2000/svg">
@@ -415,7 +421,7 @@
                             будет
                             озвучена после прочтения Вашего ТЗ</p>
                     </div>
-                    <div class="tarif-item">
+                    <div class="tarif-item tarif-left">
                         <div class="tarif-header">
                             <p class="tarif-name">Разработка<br>лэндинга или сайт визитки</p>
                             <p class="tarif-text">Небольшой сайт состоящий из одной страницы</p>
@@ -440,7 +446,7 @@
                             <p class="tarif-price">От 7 000 Р</p>
                         </div>
                     </div>
-                    <div class="tarif-item">
+                    <div class="tarif-item tarif-left">
                         <div class="tarif-header">
                             <p class="tarif-name">Разработка<br>корпоративного сайта</p>
                             <p class="tarif-text">Небольшой сайт с n-количеством страниц</p>
@@ -462,7 +468,7 @@
                             <p class="tarif-price">От 10 000 Р</p>
                         </div>
                     </div>
-                    <div class="tarif-item">
+                    <div class="tarif-item tarif-left">
                         <div class="tarif-header">
                             <p class="tarif-name">Разработка<br>интернет - магазина</p>
                             <p class="tarif-text">Полноценный каталог вашей продукции</p>
@@ -554,6 +560,10 @@
         </div>
     </div>
     </div>
+    <div id="dialog" title="Basic dialog">
+        <p>This is an animated dialog which is useful for displaying information. The dialog window can be moved,
+            resized and closed with the &apos;x&apos; icon.</p>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="script/jquery-ui.min.js"></script>
@@ -564,6 +574,21 @@
             });
             $(document).tooltip();
             $("#communicate").selectmenu();
+            $("#dialog").dialog({
+                autoOpen: false,
+                show: {
+                    effect: "blind",
+                    duration: 1000
+                },
+                hide: {
+                    effect: "blind",
+                    duration: 1000
+                }
+            });
+
+            $("#opener").on("click", function () {
+                $("#dialog").dialog("open");
+            });
         });
         $(".tech-image").tooltip({
             position: {
